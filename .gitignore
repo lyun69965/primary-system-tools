@@ -1,0 +1,10 @@
+# LaTeX 编译中间产物（week1/q04 下）
+week1/q04/*.aux
+week1/q04/*.log
+week1/q04/*.fls
+week1/q04/*.fdb_latexmk
+
+# 系统/编辑器临时文件
+.DS_Store
+Thumbs.db
+*.swp
