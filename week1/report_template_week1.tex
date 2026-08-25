@@ -67,7 +67,7 @@
 \noindent{\color{primary}\rule{\textwidth}{1pt}}
 
 \begin{abstract}
-本报告围绕第一周四个实验题目展开，覆盖命令行文件与目录操作、Shell 脚本与文本处理、Git 分支管理与冲突解决、以及 \LaTeX{} 排版与交叉引用四大主题。报告按“题目分析与知识点总结”“遇到的问题与解决方法”“实验总结”三个部分组织，并在文末附上本次实验的 GitHub 仓库链接与提交记录截图。
+本报告围绕第一周四个实验题目展开，覆盖命令行文件与目录操作、Shell 脚本与文本处理、Git 分支管理与冲突解决、以及 \LaTeX{} 排版与交叉引用四大主题。报告按“题目分析与知识点总结”“遇到的问题与解决方法”“实验总结”“课后巩固”四个部分组织，并在文末附上本次实验的 GitHub 仓库链接与提交记录截图。
 \end{abstract}
 
 \tableofcontents
@@ -85,7 +85,7 @@
 \begin{itemize}
   \item \texttt{mkdir -p} 递归建目录；\texttt{echo -e}/\texttt{printf} 写多行内容；\texttt{touch} 建空文件。
   \item 隐藏文件以 \texttt{.} 开头，用 \texttt{ls -a} 查看；\texttt{pwd} 显示绝对路径；\texttt{ls -la} 长格式含隐藏。
-  \item \texttt{cp --parents} 保留相对目录结构；文件名含空格时用引号包裹。
+  \item \texttt{cp -{}-parents} 保留相对目录结构；文件名含空格时用引号包裹。
 \end{itemize}
 
 关键命令如下：
@@ -145,7 +145,7 @@ awk -F, 'NR>1 { s += $3; n++ }
 \begin{itemize}
   \item \texttt{git init}/\texttt{add}/\texttt{commit} 初始化与提交；\texttt{git switch -c} 创建并切换分支。
   \item \texttt{git merge} 合并；冲突处用 \texttt{<<<<<<<}、\texttt{=======}、\texttt{>>>>>>>} 标记，手工编辑后 \texttt{add}+\texttt{commit}。
-  \item \texttt{git status} 确认工作区干净；\texttt{git log --all --graph --decorate --oneline} 图形化查看历史。
+  \item \texttt{git status} 确认工作区干净；\texttt{git log -{}-all -{}-graph -{}-decorate -{}-oneline} 图形化查看历史。
 \end{itemize}
 
 关键命令如下：
@@ -251,6 +251,45 @@ git log --all --graph --decorate --oneline
 \end{itemize}
 
 这些工具是后续系统开发实践中不可或缺的基础技能，为后续课程与项目开发打下了良好的基础。
+
+% ============================================================
+\section{课后巩固：12 个实例练习}
+% ============================================================
+
+为巩固本周四道题的知识点，我课后额外做了 12 个由浅入深的实例练习，覆盖文件系统、管道与文本处理、Git、\LaTeX{} 四个方向，每个实例都按照“练什么 → 任务 → 思路 → 参考 → 自查”的流程完成。下表是这 12 个实例的总览：
+
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabular}{cllp{7.0cm}}
+    \toprule
+    \textbf{\#} & \textbf{实例} & \textbf{主题} & \textbf{覆盖知识点} \\
+    \midrule
+    1 & 搭建练习营地 & 文件系统 & \texttt{mkdir -p}、\texttt{pwd}、\texttt{ls -la}、\texttt{touch} \\
+    2 & 会说话的文件名 & 文件系统 & 空格文件名与引号、\texttt{printf} \\
+    3 & 复制搬家 & 文件系统 & \texttt{find -name}、\texttt{cp -{}-parents} 保留结构 \\
+    4 & 权限门卫与清单 & 文件系统 & \texttt{chmod} 分类型、\texttt{find -printf}、\texttt{sort}、重定向 \\
+    5 & 日志流水线初体验 & 管道文本 & \texttt{tail}、\texttt{sort}、\texttt{head}、管道 \texttt{|} \\
+    6 & awk 认列 & 管道文本 & \texttt{awk -F}、\texttt{\$N}、\texttt{NR>1} 排表头 \\
+    7 & 谁是最强王者 & 管道文本 & 正则匹配、\texttt{sort}、\texttt{uniq -c}、多键排序 \\
+    8 & 脚本小作坊 & 管道文本 & \texttt{\$1}、文件判断、\texttt{>\&2}、\texttt{exit}、\texttt{\%.2f} \\
+    9 & Git 第一次亲密接触 & Git & \texttt{init}、\texttt{config}、\texttt{add}、\texttt{commit}、\texttt{status}、\texttt{log} \\
+    10 & 分叉之路 & Git & 分支、合并、冲突制造与解决 \\
+    11 & 第一份中文文档 & \LaTeX{} & \texttt{ctexart}、标题、章节、\texttt{xelatex} 编译 \\
+    12 & 报告的灵魂 & \LaTeX{} & 公式、表格、\texttt{label}、交叉引用 \\
+    \bottomrule
+  \end{tabular}
+  \caption{课后巩固的 12 个实例总览}
+  \label{tab:practice}
+\end{table}
+
+\subsection{解题感悟}
+
+课后我按这 12 个实例把本周的知识点从头到尾敲了一遍。最大的感受是：这些工具的道理其实都不难，但只听不敲，等于没学。比如“文件名有空格要加引号”，课堂上听一遍就过去了，等我自己不加引号敲进去、看着它报错，才真正记住。awk 的那几个参数也是，光看讲义记不住，自己写一个统计脚本、跑一遍，就清楚多了。
+
+第 7 个实例和第 2 道题其实是同一件事。一开始我盯着 \texttt{sort -k1,1nr -k2,2} 看了半天没懂，后来把它拆成“第一列次数降序、第二列字典序”两个意思，才顺过来。Git 的分支合并也一样，不亲手制造一次冲突，永远不知道 \texttt{<<<<<<<}、\texttt{=======}、\texttt{>>>>>>>} 这些标记长什么样。练到后面我慢慢明白，这些工具没有捷径，就是多敲、多报错、多查，错了再改，慢慢就熟了。
+
+完整版（含每个实例的思路与参考代码）已随仓库上传，可在 GitHub 仓库的 \href{https://github.com/lyun69965/primary-system-tools}{\texttt{第1周\_12个实例练习.md}} 中阅读和复制代码。
 
 % ============================================================
 \section{附录：GitHub 链接与提交记录}
