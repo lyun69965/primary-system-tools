@@ -9,9 +9,9 @@
 - `q02` 随机访问日志统计（Shell 管道与文本处理）
 - `q03` 制造、解决并解释一次合并冲突（Git）
 - `q04` 修复并构建一页技术说明（LaTeX）
-- `report_template_week1.tex` / `.pdf` 第一周实验报告（LaTeX）
+- `report_week1.tex` / `.pdf` 第一周实验报告（LaTeX）
 - `第1周_12个实例练习.md` 课后巩固实例练习
-- `commit.png` 提交记录截图
+- `commit_week1.png` 提交记录截图
 
 ### week2 — 第2周（命令行环境 / 开发环境与工具 / Debugging and Profiling）
 - `q05` 控制一个可清理的后台任务（进程、信号与任务控制）
