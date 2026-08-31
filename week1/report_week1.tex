@@ -104,6 +104,13 @@ mkdir -p work/25120014018
 find input -name '*.txt' -exec cp --parents {} work/25120014018/ \;
 \end{lstlisting}
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\textwidth,height=0.72\textheight,keepaspectratio]{q01.png}
+  \caption{第1题：含空格文件名的批量整理}
+  \label{fig:q01}
+\end{figure}
+
 \subsection{题目二：Shell 脚本与文本处理}
 
 \textbf{题目分析}：编写 \texttt{analyze.sh} 对 CSV 访问日志做统计，要求具备错误处理，并输出 HTTP 5xx 次数最多的前 2 个 \texttt{path} 与平均 \texttt{latency\_ms}。
@@ -136,6 +143,13 @@ echo "== average latency_ms =="
 awk -F, 'NR>1 { s += $3; n++ }
          END { if (n > 0) printf "%.2f\n", s/n }' "$1"
 \end{lstlisting}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\textwidth,height=0.72\textheight,keepaspectratio]{q02.png}
+  \caption{第2题：随机访问日志统计}
+  \label{fig:q02}
+\end{figure}
 
 \subsection{题目三：Git 分支管理与冲突解决}
 
@@ -173,6 +187,13 @@ git status                       # confirm working tree is clean
 git log --all --graph --decorate --oneline
 \end{lstlisting}
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\textwidth,height=0.72\textheight,keepaspectratio]{q03.png}
+  \caption{第3题：Git 分支合并与冲突解决}
+  \label{fig:q03}
+\end{figure}
+
 \subsection{题目四：\LaTeX{} 排版与交叉引用}
 
 \textbf{题目分析}：加入带编号与 \texttt{label} 的公式、带 \texttt{caption} 与 \texttt{label} 的 2×2 表格，并在正文中交叉引用；用 \texttt{latexmk -pdf -halt-on-error} 生成 PDF 且无 \texttt{??}。
@@ -208,6 +229,13 @@ git log --all --graph --decorate --oneline
   \caption{第一周实验题目主题对照表}
   \label{tab:overview}
 \end{table}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\textwidth,height=0.72\textheight,keepaspectratio]{q04.png}
+  \caption{第4题：LaTeX 文档构建}
+  \label{fig:q04}
+\end{figure}
 
 % ============================================================
 \section{实验遇到的问题与解决方法}

@@ -113,6 +113,13 @@ jobs                                      # [1]+ Done
 cat cleanup.log                           # 输出 CLEAN_EXIT
 \end{lstlisting}
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\textwidth,height=0.72\textheight,keepaspectratio]{q05.png}
+  \caption{第5题：控制一个可清理的后台任务}
+  \label{fig:q05}
+\end{figure}
+
 \subsection{题目二：语义重构与本地开发反馈}
 
 \textbf{题目分析}：在已配置 Python 语言服务器的编辑器中，对一个跨文件的函数名完成“跳转到定义、查找引用、重命名符号”，再用 \texttt{ruff} 做静态检查、\texttt{pytest} 跑测试，保证重构不破坏行为。
@@ -151,6 +158,13 @@ pytest                     # 1 passed
 \end{lstlisting}
 
 重命名符号 \texttt{total\_price} $\rightarrow$ \texttt{calculate\_total}，三处引用同步改变。
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\textwidth,height=0.72\textheight,keepaspectratio]{q06.png}
+  \caption{第6题：语义重构与本地开发反馈}
+  \label{fig:q06}
+\end{figure}
 
 \subsection{题目三：用调试器定位归并排序缺陷}
 
@@ -197,6 +211,13 @@ def test_given():
 def test_duplicates():
     assert merge_sort([2,2,1,2,1]) == [1,1,2,2,2]
 \end{lstlisting}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\textwidth,height=0.72\textheight,keepaspectratio]{q07.png}
+  \caption{第7题：用调试器定位归并排序缺陷}
+  \label{fig:q07}
+\end{figure}
 
 \subsection{题目四：先测量，再优化慢速词频程序}
 
@@ -250,6 +271,13 @@ python -m cProfile -s cumulative wordfreq.py
 \end{table}
 
 加速比 $= 0.160 \div 0.088 \approx 1.8$ 倍。数据集为 30000 词、1000 个唯一词，列表线性查找未出现最坏情况，故加速比有限；在更大词表下 $O(n^2)$ 与 $O(n)$ 的差距会急剧放大。
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.85\textwidth,height=0.72\textheight,keepaspectratio]{q08.png}
+  \caption{第8题：先测量再优化词频程序}
+  \label{fig:q08}
+\end{figure}
 
 % ============================================================
 \section{实验遇到的问题与解决方法}
