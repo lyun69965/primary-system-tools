@@ -21,3 +21,13 @@
 - `report_week2.tex` / `.pdf` 第二周实验报告（LaTeX）
 - `第2周_12个实例练习.md` 课后巩固实例练习
 - `commit_week2.png` 提交记录截图
+
+### week3 — 第3周（Packaging and Shipping Code / 智能体编程 / 不止于代码 / Python 与 PyTorch）
+- `q09` 从源码构建并在干净环境安装 Wheel（Packaging）
+- `q10` 让编程智能体进入可验证的修复循环（智能体编程）
+- `q11` 把"无法处理"的协作材料改成可执行信息（不止于代码）
+- `q12` 修复一个可复现的线性回归训练循环（Python 与 PyTorch）
+- `report_week3.tex` / `.pdf` 第三周实验报告（LaTeX）
+- `第3周_12个实例练习.md` 课后巩固实例练习
+- `q09.png`~`q12.png` 四题运行结果截图
+- `commit_week3.png` 提交记录截图

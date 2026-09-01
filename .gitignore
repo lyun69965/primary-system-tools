@@ -1,8 +1,14 @@
-# LaTeX 编译中间产物（week1/q04 下）
-week1/q04/*.aux
-week1/q04/*.log
-week1/q04/*.fls
-week1/q04/*.fdb_latexmk
+# LaTeX 编译中间产物
+*.aux
+*.fls
+*.fdb_latexmk
+*.toc
+*.out
+*.xdv
+*.log
+!week1/q01/input/run.log
+!week2/q05/stdout.log
+!week2/q05/stderr.log
 
 # Python 缓存
 __pycache__/
